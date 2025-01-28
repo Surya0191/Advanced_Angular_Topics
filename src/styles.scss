@@ -1,1 +1,64 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #004f4f;
+  font-family: 'Roboto', sans-serif; /* For font consistency */
+  color: #02fbfb; /* Adjust text color if needed for contrast */
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700; /* Bold weight for headings */ /* Adjust to match the theme */
+}
+
+h1 {
+  font-size: 3rem;  /* Larger size */
+  margin: 0;
+  padding: 20px;
+}
+h2 {
+  font-size: 2rem;
+  font-weight: 500; /* Lighter weight for subheadings */
+}
+
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #004f4f;
+  padding: 0.5rem 1rem;
+  color: #02fbfb;
+}
+
+.nav-links a {
+  margin-left: 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+.tile-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin: 1rem;
+
+}
+
+.tile {
+  cursor: pointer;
+}
+
+mat-card {
+  padding: 1rem;
+  transition: transform 0.3s;
+  background-color: black !important;
+}
+
+mat-card:hover {
+  transform: scale(1.05);
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

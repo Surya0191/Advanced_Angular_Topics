@@ -1,0 +1,13 @@
+<div class="tile-container">
+    <div
+      class="tile"
+      *ngFor="let topic of topics"
+      [routerLink]="topic.route"
+    >
+      <mat-card>
+        <mat-card-title>{{ topic.title }}</mat-card-title>
+        <mat-card-content>{{ topic.description }}</mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  
