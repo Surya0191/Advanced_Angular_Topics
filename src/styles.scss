@@ -28,8 +28,10 @@ h2 {
   flex-direction: column;
   justify-content: space-between;
   background-color: #004f4f;
-  padding: 0.5rem 1rem;
   color: #02fbfb;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .nav-links a {
@@ -54,6 +56,10 @@ mat-card {
   padding: 1rem;
   transition: transform 0.3s;
   background-color: black !important;
+}
+
+mat-card-content {
+  color: cornsilk;
 }
 
 mat-card:hover {

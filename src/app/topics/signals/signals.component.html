@@ -1,0 +1,15 @@
+<div class="container">
+    <h1 style="color: beige;"> Debug to dive in and understand</h1>
+    <div style="padding: 20px;">
+        <h2>This signal is effected {{effectCount}} time(s)</h2>
+        <div class="count">{{count()}}</div>
+        <button (click)="increase()">Increase</button>
+        <div class="count">{{area()}}</div>
+        <button (click)="calculateArea()">Calculate</button>
+        <router-outlet></router-outlet>
+    </div>
+
+    <div>
+        <button style="background-color: chartreuse;color: blue;" [routerLink]="['/signals/checkout']">Demo App</button>
+    </div>
+</div>
