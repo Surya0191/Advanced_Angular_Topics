@@ -1,3 +1,7 @@
-<div style="display: flex; justify-content: center; align-items: center; height: 100vh; text-align: center;">
-    <p>Working on it soon!!</p>
+<div class="message">
+    <p>The number turns <span class="red-text">red</span> when even and <span class="yellow-text">yellow</span> when
+        odd.</p>
+</div>
+<div appHighlight [number]="number" [divisibleBy]="2" class="container" (click)="onClick()">
+    {{number}}
 </div>
