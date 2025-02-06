@@ -1,3 +1,41 @@
-<div style="display: flex; justify-content: center; align-items: center; height: 100vh; text-align: center;">
-    <p>Working on it soon!!</p>
+<div class="container">
+    <h2>Enable Forkjoin and refresh to see difference</h2>
+    <h3>Here Forkjoin executes all the observables in parallel</h3>
+    <button class="refresh-btn" (click)="refreshData()">Refresh</button>
+    
+    <label class="toggle-switch">
+        <input type="checkbox" (change)="toggleForkJoin($event)">
+        <span class="slider"></span>
+    </label>
+    <p *ngIf="isForkJoinEnabled" class="status-text">ForkJoin is Enabled</p>
+
+    <div class="widgets">
+        <div class="widget">
+            <div>
+                <div class="title">Schools</div>
+                <div class="value">{{schoolsCount}}</div>
+                <div class="spinner-box" *ngIf="isWidgetOneSpinner">
+                    <div class="sk-circle"></div>
+                </div>
+            </div>
+        </div>
+        <div class="widget">
+            <div>
+                <div class="title">Hospitals</div>
+                <div class="value">{{hospitalsCount}}</div>
+                <div class="spinner-box" *ngIf="isWidgetTwoSpinner">
+                    <div class="sk-circle"></div>
+                </div>
+            </div>
+        </div>
+        <div class="widget">
+            <div>
+                <div class="title">Banks</div>
+                <div class="value">{{banksCount}}</div>
+                <div class="spinner-box" *ngIf="isWidgetThreeSpinner">
+                    <div class="sk-circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
