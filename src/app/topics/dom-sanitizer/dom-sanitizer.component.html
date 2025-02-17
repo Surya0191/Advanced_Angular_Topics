@@ -1,3 +1,22 @@
-<div style="display: flex; justify-content: center; align-items: center; height: 100vh; text-align: center;">
-    <p>Working on it soon!!</p>
+<div class="container">
+    <h2>DOM Sanitizer Demo</h2>
+
+    <p>
+        This example demonstrates how Angular's DOM Sanitizer handles potentially unsafe HTML.
+        Without sanitization, Angular removes scripts to prevent security risks.
+        With sanitization, we manually trust the HTML using <code>bypassSecurityTrustHtml()</code>.
+    </p>
+
+    <h3>❌ Without DOM Sanitizer</h3>
+    <p>
+        Angular automatically **removes unsafe content** such as scripts to **prevent XSS attacks**.
+    </p>
+    <div class="box" [innerHTML]="unsafeHtml"></div>
+
+    <h3>✅ With DOM Sanitizer</h3>
+    <p>
+        Here, we use <code>sanitizer.bypassSecurityTrustHtml()</code> to **manually trust** the content.
+        This **keeps the original HTML intact**, but can be dangerous if not handled carefully.
+    </p>
+    <div class="box" [innerHTML]="sanitizedHtml"></div>
 </div>
